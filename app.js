@@ -4,7 +4,7 @@ const app = express()
 const path = require('path')
 
 
-app.use('/', express.static(path.join(__dirname, 'todo/build')))
+app.use('/', express.static(path.join(__dirname, 'web/build')))
 
 
 // app.get('/', (req, res) => {
@@ -25,7 +25,7 @@ app.delete('/api/v1/profile', (req, res) => {
 })
 
 app.get("/**", (req, res, next) => {
-    res.sendFile(path.join(__dirname, "./todo/build/index.html"))
+    res.sendFile(path.join(__dirname, "./web/build/index.html"))
 })
 
 // app.use((req,res,next)=>{   
